@@ -13,7 +13,7 @@ import ProjectDetails from './ProjectDetails.tsx'
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<Router>
+		<Router basename="/Portfolio">
 			<Routes>
 				<Route element={<DarkMode />}>
 					<Route path='/about' element={<About />} />
