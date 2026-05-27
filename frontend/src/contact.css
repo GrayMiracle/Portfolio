@@ -1,0 +1,256 @@
+.contact-bg {
+  background-image: url('https://imgs.search.brave.com/rTLEk5PvLe2wLph8oLIXM840grEy3SYb_0ACvmBSDSk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS84Mi83/Ni9vck9CNnN3Lmpw/Zw');
+}
+
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeInPage 0.5s ease-out forwards;
+}
+
+/* ── Card shell ─────────────────────────────────────────────── */
+.contact-card {
+  width: 85%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.89);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04),
+    0 24px 60px rgba(0,0,0,0.5);
+}
+
+.light .contact-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0,0,0,0.1);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.74),
+    0 24px 60px rgba(0,0,0,0.72);
+}
+
+
+/* ── Header bar ─────────────────────────────────────────────── */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  background: rgba(190, 0, 0, 0.616);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.light .card-label {
+  color: rgb(0, 0, 0);
+}
+
+.card-id {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.75);
+}
+
+.light .card-id {
+  color: rgba(0,0,0);
+}
+
+/* ── Body ───────────────────────────────────────────────────── */
+.card-body {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── Left info rows ─────────────────────────────────────────── */
+.card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.card-row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  transition:
+    border-color  0.18s ease,
+    transform     0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-row:hover {
+  border-color: rgba(255, 0, 0, 0.22);
+  transform: scale(1.03);
+}
+
+.card-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  box-shadow: none;
+  transition: background 0.18s ease, box-shadow 0.18s ease;
+  flex-shrink: 0;
+}
+
+.card-row:hover .card-dot {
+  background: red;
+  box-shadow: 0 0 8px rgba(255,0,0,0.3);
+}
+
+.card-field {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  width: 72px;
+  flex-shrink: 0;
+}
+
+.light .card-field {
+  color: rgba(0,0,0,0.55);
+}
+
+.card-value {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+}
+
+.light .card-value {
+  color: rgba(0,0,0,0.85);
+}
+
+a.card-link {
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.18s ease;
+}
+
+a.card-link:hover {
+  color: red;
+}
+
+/* ── Right avatar ───────────────────────────────────────────── */
+.card-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.card-avatar {
+  width: 25vw;
+  aspect-ratio: 1 / 1;
+  height: 45vh;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.158);
+  border: 7px solid rgba(255,0,0,0.5);
+  box-shadow: 0 0 20px rgba(255,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-avatar-initial {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+}
+
+/* ── Footer links ───────────────────────────────────────────── */
+.card-footer {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem 1.4rem;
+  background: rgba(255,255,255,0.02);
+}
+
+.card-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.card-link-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  transition:
+    background   0.18s ease,
+    border-color 0.18s ease,
+    color        0.18s ease,
+    transform    0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.light .card-link-btn {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.55);
+}
+
+.card-link-btn:hover {
+  background: rgba(255,0,0,0.15);
+  border-color: red;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.light .card-link-btn:hover {
+  background: rgba(255,0,0,0.15);
+  border-color: red;
+  color: #000;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .contact-card { max-width: 100%; }
+  .card-body { flex-direction: column; }
+  .card-right { padding-left: 0; }
+}

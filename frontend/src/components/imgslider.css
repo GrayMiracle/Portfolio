@@ -1,0 +1,70 @@
+.img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.22);
+    transition: width 0.2s ease, background 0.22s ease;
+    pointer-events: all;
+    padding: 0;
+}
+
+.dark .dot {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.light .dot {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.light .dot.active {
+    background: rgb(255, 70, 70);
+}
+
+.dot.active {
+    width: 20px;
+    background: rgb(255, 70, 70);
+    box-shadow: 0 0 8px rgb(255, 128, 128);
+}
+
+.img-stack {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.fade-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-image.active {
+    opacity: 1;
+}
+
+.imgdots {
+    z-index: 15;
+}

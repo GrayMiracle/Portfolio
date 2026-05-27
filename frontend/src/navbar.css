@@ -1,0 +1,101 @@
+.navbar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    top: 0vh;
+    left: 0vw;
+    position: fixed;
+    z-index: 100;
+}
+
+.navbar button {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    height: 100%;
+    width: 10%;
+    opacity: 0.8;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.navbar button:hover {
+    opacity: 1;
+}
+
+.aboutbtn {
+    left: 0%
+}
+
+.projectsbtn {
+    left: 10%;
+}
+
+.impactbtn {
+    left: 20%;
+}
+
+.experiencebtn {
+    left: 70%;
+}
+
+.contactbtn {
+    left: 80%;
+}
+
+.navbar .theme {
+    left: 90%;
+}
+
+.navbar .home {
+    width: 40%;
+    left: 30%;
+    opacity: 0;
+    transition: opacity 0.3s color 0.3s ease;
+    color: rgba(255, 0, 0, 0.757);
+}
+
+.navbar .home:hover {
+    opacity: 1;
+}
+
+.navbar.dark .home.show-hint {
+    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.777);
+}
+
+.navbar.light .home.show-hint {
+    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.777);
+}
+
+.navbar .home.show-hint::after {
+    content: '↑';
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.navbar .home.show-hint:hover {
+    opacity: 1;
+    color: rgba(255, 0, 0, 0.757);
+}
+
+.navbar.dark {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar.light {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar.dark button:hover {
+    color: rgba(255, 0, 0, 0.757);
+}
+
+.navbar.light button:hover {
+    color: rgb(255, 0, 0);
+}
+
+.navbar.dark .home {
+    color: rgba(255, 0, 0, 0.777);
+}

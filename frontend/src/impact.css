@@ -1,0 +1,184 @@
+.impact-bg {
+  background-image: url('https://imgs.search.brave.com/LCkUOOHJ2U8QfxLF1naPJ8OYXiy3mt61TAc_di0XpWg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS8yNS85/Ny82WERpd0IuanBl/Zw');
+}
+
+.impact-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12vh 4rem;
+  gap: 4rem;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeInPage 0.5s ease-out forwards;
+}
+
+/* ── Left ── */
+.impact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.impact-subtitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: red;
+  margin: 0;
+}
+
+.impact-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  line-height: 1;
+}
+
+.impact-divider {
+  width: 40px;
+  height: 2px;
+  background: red;
+  border-radius: 2px;
+  box-shadow: 0 0 8px red;
+  opacity: 0;
+  animation: fadeInBar 0.6s ease-out 0.1s forwards;
+}
+
+.impact-desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  max-width: 480px;
+}
+
+.impact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.impact-block-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.impact-list li {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.impact-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: red;
+  box-shadow: 0 0 6px red;
+}
+
+/* ── Stats ── */
+.impact-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.impact-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.impact-stat-value {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.impact-stat-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── Right ── */
+.impact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.impact-img-card {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.4);
+}
+
+.impact-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.impact-img-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin: 0;
+}
+
+/* ── Light mode ── */
+.light .impact-title      { color: #000; }
+.light .impact-desc       { color: rgba(0,0,0,0.6); }
+.light .impact-list li    { color: rgba(0,0,0,0.7); }
+.light .impact-stat-value { color: #000; }
+.light .impact-subtitle     { color: rgb(129, 0, 0); }
+.light .impact-block-label  { color: rgba(0,0,0,0.55); }
+.light .impact-stat-label   { color: rgba(0,0,0,0.75); }
+.light .impact-img-label    { color: rgba(0,0,0,0.55); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .impact-section {
+    flex-direction: column;
+    padding: 12vh 2rem;
+  }
+  .impact-stats { gap: 1.25rem; }
+}

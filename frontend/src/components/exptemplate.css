@@ -1,0 +1,75 @@
+.experience-showcase {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.exp-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exp-entry {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  text-align: left;
+  min-height: 50vh;
+  width: 37vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-entry h3 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.exp-data {
+  margin-bottom: 14px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.exp-description {
+  margin: 0;
+  padding-left: 15px;
+  flex-grow: 1;
+  font-size: clamp(0.5rem, 1.2vw, 1.25rem);
+}
+
+.exp-description li {
+  margin-bottom: 10px;
+}
+
+.exp-arrow {
+    position: absolute;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    opacity: 0;
+    z-index: 10;
+}
+
+.exp-arrow.right {
+    right: 0;
+}
+
+.exp-arrow.left {
+    left: 0;
+}
+
+.exp-arrow:hover {
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.experience-showcase .dots {
+  position: static;
+  transform: none;
+}
