@@ -8,7 +8,7 @@ import PageWrapper from './PageWrapper.tsx'
 import ExpShowcase from './components/ExpTemplate.tsx'
 
 const Images = (folder: string, count: number) =>
-	Array.from({ length: count }, (_, i) => `./src/assets/${folder}Images/${i}.jpg`)
+	Array.from({ length: count }, (_, i) => `${import.meta.env.BASE_URL}assets/${folder}Images/${i}.jpg`)
 
 function App() {
 
@@ -16,14 +16,14 @@ function App() {
 	const aboutImages = Images("about", 6)
 	const experienceImages = Images("experience", 5)
 	const projectImages = [
-		{ src: '/src/assets/projectImages/0.jpg', url: '/projects/mintube' },
-		{ src: '/src/assets/projectImages/1.jpg', url: '/projects/portableai' },
-		{ src: '/src/assets/projectImages/2.jpg', url: '/projects/simengine' },
-		{ src: '/src/assets/projectImages/3.jpg', url: '/projects/mlpassivepredictor' },
-		{ src: '/src/assets/projectImages/4.jpg', url: '/projects/dokkandata' },
-		{ src: '/src/assets/projectImages/5.jpg', url: '/projects/discaitts' },
-		{ src: '/src/assets/projectImages/6.jpg', url: '/projects/dokkanguessr' },
-		{ src: '/src/assets/projectImages/7.jpg', url: '/projects/santaobby' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/0.jpg`, url: '/projects/mintube' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/1.jpg`, url: '/projects/portableai' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/2.jpg`, url: '/projects/simengine' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/3.jpg`, url: '/projects/mlpassivepredictor' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/4.jpg`, url: '/projects/dokkandata' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/5.jpg`, url: '/projects/discaitts' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/6.jpg`, url: '/projects/dokkanguessr' },
+		{ src: `${import.meta.env.BASE_URL}assets/projectImages/7.jpg`, url: '/projects/santaobby' },
 	]
 
 	const [activeSection, setActiveSection] = useState("intro")

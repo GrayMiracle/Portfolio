@@ -5,7 +5,7 @@ import PageWrapper from './PageWrapper.tsx'
 import './projectdetails.css'
 
 const Images = (folder: string, count: number) => 
-    Array.from({ length: count }, (_, i) => `/src/assets/projects/${folder}/${i}.jpg`)
+    Array.from({ length: count }, (_, i) => `${import.meta.env.BASE_URL}assets/projects/${folder}/${i}.jpg`)
 
 function ProjectDetails() {
     const { slug } = useParams()

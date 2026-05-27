@@ -52,7 +52,7 @@ function Impact() {
 
 				<div className="impact-right">
 					<div className="impact-img-card">
-						<img src="/src/assets/analytics.png" alt="Channel Analytics" className="impact-img" />
+						<img src="${import.meta.env.BASE_URL}assets/analytics.png" alt="Channel Analytics" className="impact-img" />
 					</div>
 					<p className="impact-img-label">Channel Analytics - past 365 days</p>
 				</div>

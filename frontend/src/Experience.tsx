@@ -4,7 +4,7 @@ import PageWrapper from './PageWrapper.tsx'
 import './experience.css'
 
 const Images = (folder: string, count: number) => 
-    Array.from({ length: count }, (_, i) => `/src/assets/experiences/${folder}Images/${i}.jpg`)
+    Array.from({ length: count }, (_, i) => `${import.meta.env.BASE_URL}assets/experiences/${folder}Images/${i}.jpg`)
 
 function Experience() {
     const [expIndex, setExpIndex] = useState(0)
