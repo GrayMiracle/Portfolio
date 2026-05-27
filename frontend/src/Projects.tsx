@@ -1,7 +1,5 @@
-import { useState, useEffect } from 'react'
 import './projects.css'
 import PageWrapper from './PageWrapper.tsx'
-import { SlGraduation } from 'react-icons/sl'
 import { Link } from 'react-router-dom'
 import { projects } from './components/projectData.tsx'
 

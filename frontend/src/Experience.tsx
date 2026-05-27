@@ -1,5 +1,4 @@
-import { useState, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import { useState} from 'react'
 import { experiences } from './components/ExpTemplate.tsx'
 import PageWrapper from './PageWrapper.tsx'
 import './experience.css'

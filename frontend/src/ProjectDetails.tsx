@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react'
-import { useParams, Navigate, Link, useNavigate } from 'react-router-dom'
+import { useState} from 'react'
+import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { projects } from './components/projectData.tsx'
 import PageWrapper from './PageWrapper.tsx'
 import './projectdetails.css'
