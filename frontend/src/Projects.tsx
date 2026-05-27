@@ -16,7 +16,7 @@ function Projects() {
 					{projects.map((project, index) => (
 						<Link to={`/projects/${project.slug}`} key={index}>
 							<article className="project-card">
-								<div className="project-card-image" style={{ backgroundImage: `url(${project.image})` }}></div>
+								<div className="project-card-image" style={{ backgroundImage: `url("${project.image}")` }}></div>
 								<div className="project-card-overlay">
 
 									<p className="project-subtitle">{project.subtitle}</p>
