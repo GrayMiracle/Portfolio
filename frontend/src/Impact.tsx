@@ -13,14 +13,14 @@ function Impact() {
 					<div className="impact-divider" />
 
 					<p className="impact-desc">
-						Built and scaled a long-form content brand from scratch: researching, scripting, and producing
+						Built and scaled a long-form content brand by building assistive tools to help with researching and scripting to produce
 						40-60 minute deep dives with consistently high audience retention.
 					</p>
 
 					<div className="impact-block">
 						<p className="impact-block-label">Technical Work</p>
 						<ul className="impact-list">
-							<li>Built Python pipelines to automate video production workflows, reducing manual workload by ~20%</li>
+							<li>Built various Python pipelines to automate video production workflows, reducing manual workload by ~20%</li>
 							<li>Aggregated and processed data points for topic research and audience demand analysis</li>
 							<li>Ran sentiment analysis on community discussions to identify high-interest content angles</li>
 						</ul>
