@@ -36,6 +36,19 @@ for (const image of images) {
   const ext = parsed.ext.toLowerCase();
   const outputPath = path.join(parsed.dir, `${parsed.name}.webp`);
 
+  // Check if WebP already exists
+  try {
+    await fs.access(outputPath);
+    console.log(`WebP already exists, skipping: ${outputPath}`);
+    
+    // Delete the original image file
+    await fs.unlink(image);
+    console.log(`Deleted original: ${image}`);
+    continue;
+  } catch {
+    // File doesn't exist, proceed with conversion
+  }
+
   if (ext === ".gif") {
     const metadata = await sharp(image, { animated: true }).metadata();
 
@@ -67,4 +80,8 @@ for (const image of images) {
 
     console.log(`Optimized still image: ${outputPath}`);
   }
+
+  // Delete the original image after successful conversion
+  await fs.unlink(image);
+  console.log(`Deleted original: ${image}`);
 }
